@@ -21,6 +21,7 @@ function ListItemLink(props: ListItemProps<'a', { button?: true }>) {
 }
 
 export const RoadMap = () => {
+
   const classes = useStyles();
 
   return (
@@ -29,7 +30,7 @@ export const RoadMap = () => {
         {
           categories.map((category) => {
             return (
-              <ListItemLink href="/lessons" key={category}>
+              <ListItemLink href={`/lessons/${category}`} key={category}>
                 <ListItemText primary={category}/>
               </ListItemLink>
             );

@@ -15,7 +15,7 @@ function App() {
       <div className="App">
 
         <Switch>
-          <Route path="/lessons">
+          <Route path="/lessons/:category">
             <Lessons />
           </Route>
           <Route path="/">

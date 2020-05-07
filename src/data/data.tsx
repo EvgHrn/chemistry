@@ -16,3 +16,25 @@ export const categories = [
     "Сера",
     "Галогены"
   ];
+
+export const getLessons = (category: string) => {
+    const lessons = [
+        {
+            category: "Основные понятия",
+            lessons: [
+              "Химические явления",
+                "Вещество и его строение",
+              "Простые и сложные вещества",
+              "Валентность"
+            ]
+        },
+    ];
+
+    const result = lessons.find((obj) => obj.category === category);
+
+    if(result) {
+        return result.lessons;
+    }
+
+    return [];
+};

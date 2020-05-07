@@ -10,14 +10,16 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 150,
+    width: 250,
+    height: 380,
+    margin: 10,
   },
   media: {
     height: 140,
   },
 });
 
-export const LessonCard = () => {
+export const LessonCard = (props: LessonCardPropsType) => {
 
   const classes = useStyles();
 
@@ -31,10 +33,10 @@ export const LessonCard = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Lizard
+              {props.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species
+              
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -48,4 +50,8 @@ export const LessonCard = () => {
         </CardActions>
       </Card>
   );
+};
+
+interface LessonCardPropsType {
+  title: string
 }
