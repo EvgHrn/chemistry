@@ -1,26 +1,19 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Grid, { GridSpacing } from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
   useParams
 } from "react-router-dom";
-import { LessonCard } from "../LessonCard";
-import { getLessons } from "../data/data";
+import AppContext from '../context/AppContext';
+import { LessonCard } from "../components/LessonCard";
+import {LessonType} from "../types/LessonType";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       paddingTop: theme.spacing(2),
       width: '100%',
-      flexGrow: 1,
-    },
-    paper: {
-      height: 140,
-      width: 100,
+      // flexGrow: 1,
     },
     control: {
       padding: theme.spacing(2),
@@ -29,30 +22,32 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const Lessons = () => {
-  const [spacing, setSpacing] = React.useState<GridSpacing>(2);
+
   const classes = useStyles();
 
   const { category } = useParams();
 
-  const [lessons, setLessons] = React.useState<string[]>([]);
+  const store = React.useContext<LessonType[]>(AppContext);
+
+  const [lessonsTitles, setLessonsTitles] = React.useState<string[]>([]);
 
   console.log("Lessons category: ", category);
 
   React.useEffect(() => {
-    setLessons(getLessons(category));
+    const lessonObj = store.find((obj: LessonType) => obj.category === category);
+    if(lessonObj) {
+
+      setLessonsTitles(lessonObj.lessons.map(lessonObj => lessonObj.title));
+    }
   }, []);
 
-  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setSpacing(Number((event.target as HTMLInputElement).value) as GridSpacing);
-  // };
-
   return (
-    <Grid container className={classes.root} spacing={4}>
+    <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12}>
-        <Grid container justify="center" spacing={spacing}>
-          {lessons.map((lesson: string) => (
+        <Grid container justify="center">
+          {lessonsTitles.map((lesson: string) => (
             <Grid key={lesson} item>
-                <LessonCard title={lesson}/>
+                <LessonCard category={category} title={lesson}/>
             </Grid>
           ))}
         </Grid>

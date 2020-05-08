@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b29f394f-a174-4f98-ac4d-deed4fe8ee42" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/AppContext.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/Theory.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/LessonType.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LessonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LessonCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LessonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LessonCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Lessons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Lessons.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/RoadMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/RoadMap.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -35,6 +44,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="ts.external.directory.path" value="C:\Users\PC123\Desktop\chemistry\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC123\Desktop\chemistry\src\components" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -48,7 +62,7 @@
       <updated>1588826334248</updated>
       <workItem from="1588826343945" duration="3328000" />
       <workItem from="1588830319908" duration="4812000" />
-      <workItem from="1588835275601" duration="304000" />
+      <workItem from="1588835275601" duration="11877000" />
     </task>
     <servers />
   </component>
